@@ -5,6 +5,7 @@ using UdonSharpEditor;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
+using Varneon.AssemblyDefintionGenerator.Editor.Callbacks;
 using static Varneon.AssemblyDefintionGenerator.Editor.DirectoryUtilities;
 
 namespace Varneon.AssemblyDefintionGenerator.Editor.Addons

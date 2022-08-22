@@ -4,6 +4,7 @@ using System.Reflection;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
+using Varneon.AssemblyDefintionGenerator.Editor.Callbacks;
 
 namespace Varneon.AssemblyDefintionGenerator.Editor
 {

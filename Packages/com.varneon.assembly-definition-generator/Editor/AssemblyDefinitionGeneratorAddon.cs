@@ -1,6 +1,6 @@
 ﻿using UnityEditorInternal;
 
-namespace Varneon.AssemblyDefintionGenerator.Editor
+namespace Varneon.AssemblyDefintionGenerator.Editor.Callbacks
 {
     public interface IAssemblyDefinitionGeneratedCallback
     {
