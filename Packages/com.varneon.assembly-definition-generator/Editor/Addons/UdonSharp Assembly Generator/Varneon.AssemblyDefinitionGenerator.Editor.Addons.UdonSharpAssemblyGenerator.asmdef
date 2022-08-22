@@ -1,0 +1,21 @@
+{
+    "name": "Varneon.AssemblyDefinitionGenerator.Editor.Addons.UdonSharpAssemblyGenerator",
+    "references": [
+        "Varneon.AssemblyDefinitionGenerator.Editor",
+        "UdonSharp.Editor",
+        "UdonSharp.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UDONSHARP"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
