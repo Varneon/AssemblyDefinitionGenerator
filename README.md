@@ -1,2 +1,2 @@
-# Repository-Template-Unity
-Template repository for Unity
+# Assembly Definition Generator
+Automatic Assembly Definition generator for Unity Editor
