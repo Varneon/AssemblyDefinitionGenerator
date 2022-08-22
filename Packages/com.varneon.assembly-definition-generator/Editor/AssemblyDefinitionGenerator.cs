@@ -166,7 +166,10 @@ namespace Varneon.AssemblyDefintionGenerator.Editor
 
                 return references;
             }
-            catch { }
+            catch
+            {
+                Debug.LogError($"{LOG_PREFIX} Could not load generated assembly! The generated Assembly Definition won't have any references assigned.");
+            }
 
             return new HashSet<string>();
         }
