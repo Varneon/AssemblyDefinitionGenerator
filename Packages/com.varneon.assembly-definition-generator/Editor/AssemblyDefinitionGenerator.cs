@@ -49,7 +49,7 @@ namespace Varneon.AssemblyDefintionGenerator.Editor
                 string directoryName = Path.GetDirectoryName(directory).Replace('\\', '/');
 
                 // Check if the folder is an Editor folder
-                bool isEditorFolder = directoryName.Split('/').Contains("Editor");
+                bool isEditorFolder = IsEditorFolder(directoryName);
 
                 // Create a new JSON object of the Assembly Definition
                 assemblyDefinitionObject = new AssemblyDefinitionObject();

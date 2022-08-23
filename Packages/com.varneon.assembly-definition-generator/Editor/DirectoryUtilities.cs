@@ -53,5 +53,15 @@ namespace Varneon.AssemblyDefintionGenerator.Editor
 
             return fullPath;
         }
+
+        /// <summary>
+        /// Checks if any of the folders in the path is "Editor"
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static bool IsEditorFolder(string path)
+        {
+            return path.Replace('\\', '/').Split('/').Contains("Editor");
+        }
     }
 }
