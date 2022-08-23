@@ -57,14 +57,21 @@ namespace Varneon.AssemblyDefintionGenerator.Editor
                 // Assign the name of the assembly
                 assemblyDefinitionObject.name = Path.GetFileNameWithoutExtension(directory);
 
+                // Get the scripts contained in the folder where the Assembly Definition is being added
+                string[] scriptsInDirectory = GetScriptsInDirectory(directoryName);
+
                 // If the folder is Editor folder, only include Editor as a platform
                 if (isEditorFolder)
                 {
                     assemblyDefinitionObject.includePlatforms = new string[] { "Editor" };
                 }
+                // If the folder is not Editor folder, prevent generation if an Editor folder with scripts is present deeper down
+                else if (!string.IsNullOrEmpty(scriptsInDirectory.FirstOrDefault(s => IsEditorFolder(s))))
+                {
+                    Debug.LogError($"{LOG_PREFIX} You are generating an assembly definition in non-Editor-only folder, but an Editor folder with scripts in it is present deeper down in this hierarchy. Make sure to separate Editor and Runtime scripts before generating Assembly Definitions.");
 
-                // Get the scripts contained in the folder where the Assembly Definition is being added
-                string[] scriptsInDirectory = GetScriptsInDirectory(directoryName);
+                    return;
+                }
 
                 // Get the full path of the temporary assembly
                 string fullTempAssemblyPath = Path.GetFullPath(TEMP_ASSEMBLY_PATH);
