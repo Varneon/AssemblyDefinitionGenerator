@@ -1,3 +1,15 @@
+<div align="center">
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Varneon/AssemblyDefinitionGenerator?style=for-the-badge)
+[![GitHub](https://img.shields.io/github/license/Varneon/AssemblyDefinitionGenerator?color=blue&style=for-the-badge)](https://github.com/Varneon/AssemblyDefinitionGenerator/blob/main/LICENSE)
+[![GitHub Repo stars](https://img.shields.io/github/stars/Varneon/AssemblyDefinitionGenerator?style=for-the-badge)](https://github.com/Varneon/AssemblyDefinitionGenerator/stargazers)
+[![GitHub all releases](https://img.shields.io/github/downloads/Varneon/AssemblyDefinitionGenerator/total?color=blue&style=for-the-badge)](https://github.com/Varneon/AssemblyDefinitionGenerator/releases)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/Varneon/AssemblyDefinitionGenerator?color=blue&label=Release&sort=semver&style=for-the-badge)](https://github.com/Varneon/AssemblyDefinitionGenerator/releases/latest)
+
+</div>
+
+---
+
 # Assembly Definition Generator
 Experimental automatic Assembly Definition generator for Unity Editor
 
