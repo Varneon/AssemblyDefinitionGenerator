@@ -3,6 +3,8 @@ Experimental automatic Assembly Definition generator for Unity Editor
 
 > [Unity Documentation - Assembly definitions](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)
 
+> ### NOTE: Assembly Definition Generator is still in Open Alpha and generation may fail under various situations, such as when compiler errors are present during the generation process
+
 ---
 
 ## Features
