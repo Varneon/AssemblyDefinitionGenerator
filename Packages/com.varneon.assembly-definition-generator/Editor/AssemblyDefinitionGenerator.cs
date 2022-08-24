@@ -105,6 +105,23 @@ namespace Varneon.AssemblyDefintionGenerator.Editor
 
             assemblyBuilder = null;
 
+            // Get all of the compiler errors
+            IEnumerable<string> compilerErrors = messages.Where(m => m.type == CompilerMessageType.Error).Select(m => m.message);
+
+            // If there are any compiler errors, fail the process
+            if(compilerErrors.Count() > 0)
+            {
+                // If any of the errors is CS0234 (In this case most likely referencing a script in Assembly-CSharp.dll or Assembly-CSharp-Editor.dll), warn the user about it
+                if(!string.IsNullOrEmpty(compilerErrors.FirstOrDefault(e => e.Contains("error CS0234"))))
+                {
+                    Debug.LogWarning($"{LOG_PREFIX} Scripts in this folder are referencing other scripts that are not in any assembly yet. Make sure to create assembly definitions for scripts being referenced before attempting automatic assembly definition generation.");
+                }
+
+                Debug.LogError($"{LOG_PREFIX} Assembly Definition generation failed with error(s):\n{string.Join("\n", compilerErrors)}");
+
+                return;
+            }
+
             // Get all precompiled assemblies from UnityEngine and UnityEditor
             IEnumerable<string> precompiledAutoReferences = CompilationPipeline.GetPrecompiledAssemblyPaths(
                 CompilationPipeline.PrecompiledAssemblySources.UnityEngine |
