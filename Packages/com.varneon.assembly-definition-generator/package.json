@@ -2,5 +2,9 @@
   "name": "com.varneon.assembly-definition-generator",
   "version": "0.0.2",
   "displayName": "Assembly Definition Generator",
-  "description": "Experimental automatic Assembly Definition generator"
+  "description": "Experimental automatic Assembly Definition generator",
+  "author": {
+    "name": "Varneon",
+    "url": "https://github.com/Varneon"
+  }
 }
